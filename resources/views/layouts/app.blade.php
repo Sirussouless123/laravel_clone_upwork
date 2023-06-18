@@ -6,13 +6,17 @@
 
         <title>Upwork</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
      
-       
+    @livewireStyles   
     </head>
     <body>
       <div class="container mx-auto px-4">
+      @include('partials.navbar')
       @yield('content')
       </div>
-   
+      
+   @livewireScripts
+  
     </body>
 </html>
