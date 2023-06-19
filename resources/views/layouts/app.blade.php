@@ -6,6 +6,10 @@
 
         <title>Upwork</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <style>
+
+            [x-cloak]{ display: none;}
+        </style>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
      
     @livewireStyles   
@@ -13,6 +17,7 @@
     <body>
       <div class="container mx-auto px-4">
       @include('partials.navbar')
+      <livewire:flash />
       @yield('content')
       </div>
       

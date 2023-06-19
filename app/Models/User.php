@@ -50,4 +50,8 @@ class User extends Authenticatable
     public function jobs(){
          return $this->hasMany('App\Models\Job');
     }
+
+    public function likes(){
+        return $this->belongsToMany('App\Models\Job');
+    }
 }
