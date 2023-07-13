@@ -33,7 +33,7 @@
     <a href="{{ route('register')}}" class="mr-5 hover:text-green-500">S'enregistrer</a>
 
     @else
-    
+    <a href="{{ route('conversation.index')}}" class="mr-5 hover:text-green-500">Mes conversations</a>
     <a href="{{ route('home')}}" class="mr-5 hover:text-green-500">Tableau de bord</a>
     <a href="{{ route('logout')}}" class="mr-5 hover:text-green-500" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a>
     <form id="logout-form" method="post" action="{{ route('logout')}}" style='display:none;'>

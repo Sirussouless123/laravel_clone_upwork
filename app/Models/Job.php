@@ -11,16 +11,22 @@ class Job extends Model
 
     public function scopeOnline($query){
            return $query->where('status', 1);
+            //   ->where('user_id','!=',auth()->user()->id);
     }
 
     public function user(){
          return $this->belongsTo('App\Models\User');
     }
 
+
+
     public function likes(){
         return $this->belongsToMany('App\Models\User');
     }
 
+    public function proposals(){
+        return $this->hasMany('App\Models\Proposal');
+    }
     public function isLiked(){
        if ( auth()->check()){
         return auth()->user()->likes->contains('id',$this->id);

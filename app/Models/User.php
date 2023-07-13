@@ -51,6 +51,20 @@ class User extends Authenticatable
          return $this->hasMany('App\Models\Job');
     }
 
+    public function proposals(){
+        return $this->hasMany('App\Models\Proposal');
+    }
+
+    public function conversations(){
+        return Conversation::where(function ($q){
+      return $q->where('to',$this->id)
+      ->orWhere('from',$this->id);
+        });
+    }
+
+    public function getConversationsAttribute(){
+        return $this->conversations()->get();
+    }
     public function likes(){
         return $this->belongsToMany('App\Models\Job');
     }
