@@ -17,7 +17,7 @@ class Conversation extends Component
     protected $listeners = ['sent'=>'$refresh'];
     public function mount($conversation){
         $this->conversation = $conversation;
-        $this->authorize('view',$conversation);
+     //   $this->authorize('view',$conversation);
 
     }
 
