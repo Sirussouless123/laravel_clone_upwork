@@ -15,3 +15,5 @@
 -Like des missions
 -Consultation des missions
 -Recherche de mission
+-Discuter  par rapport à une mission( freelance ou client)
+-Valider proposition pour une mission
